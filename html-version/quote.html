@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Custom Quote - AI Ready School</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Minimal Navbar */
+    .mini-nav {
+      background: white;
+      border-bottom: 1px solid #f3f4f6;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-mini {
+      font-size: 20px;
+      font-weight: 800;
+      color: #111827;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-mini .ai { color: #ec4899; }
+    .back-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    .back-link:hover { color: #111827; }
+
+    /* Layout */
+    .quote-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+    .page-title {
+      text-align: center;
+      font-size: 44px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 60px;
+      letter-spacing: -0.02em;
+    }
+
+    .split-layout {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    /* Left Panel */
+    .contact-panel {
+      flex: 3.5;
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      border: 1px solid #f3f4f6;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .info-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      font-size: 18px;
+      color: #4b5563;
+    }
+    .info-text h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0 0 4px;
+    }
+    .info-text p {
+      font-size: 14px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .flag-icon {
+      width: 24px;
+      height: 16px;
+      border-radius: 2px;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* Right Panel (Form) */
+    .form-panel {
+      flex: 6.5;
+      background: white;
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      border: 1px solid #f3f4f6;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .form-group.full { grid-column: span 2; }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+    .required { color: #ef4444; }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111827;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: white;
+      box-sizing: border-box;
+      transition: all 0.2s;
+      appearance: none; /* For selects */
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: #ec4899;
+      box-shadow: 0 0 0 3px rgba(236,72,153,0.1);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .select-wrapper {
+      position: relative;
+    }
+    .select-wrapper i {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+      pointer-events: none;
+      font-size: 12px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: #ee0f5e;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(238,15,94,0.3);
+      transition: all 0.2s;
+    }
+    .btn-submit:hover {
+      background: #d40951;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(238,15,94,0.4);
+    }
+
+    /* Floating Chat Icon placeholder (bottom right red circle) */
+    .floating-chat {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 56px;
+      height: 56px;
+      background: #ee0f5e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 14px rgba(238,15,94,0.3);
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    @media (max-width: 900px) {
+      .split-layout { flex-direction: column; }
+      .contact-panel, .form-panel { flex: none; width: 100%; box-sizing: border-box; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Nav -->
+  <nav class="mini-nav">
+    <a href="index.html" class="logo-mini">
+      <span class="ai">AI Ready</span> School
+    </a>
+  </nav>
+
+  <div class="quote-container">
+    <h1 class="page-title">Ready to Get a Custom Quote?</h1>
+
+    <div class="split-layout">
+      
+      <!-- Left Panel: Contact Info -->
+      <div class="contact-panel">
+        
+        <div class="info-block">
+          <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+          <div class="info-text">
+            <h3>Email us</h3>
+            <p>hey@aireadyschool.com</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+          <div class="info-text">
+            <h3>Phone number</h3>
+            <p>(91) 9100013885</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon-box" style="overflow: hidden;">
+            <!-- India Flag inline SVG -->
+            <svg viewBox="0 0 3 2" class="flag-icon">
+               <rect width="3" height="0.666" fill="#FF9933"/>
+               <rect y="0.666" width="3" height="0.666" fill="#FFFFFF"/>
+               <rect y="1.333" width="3" height="0.666" fill="#138808"/>
+               <circle cx="1.5" cy="1" r="0.25" fill="#000080"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h3>Head Office</h3>
+            <p>#204, Sai Datta<br>Arunodaya Colony<br>Madhapur, Hyderabad<br>INDIA</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Panel: Form -->
+      <div class="form-panel">
+        <form onsubmit="event.preventDefault();">
+          <div class="form-grid">
+
+            <div class="form-group full">
+              <label>Full name <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group full select-wrapper">
+              <label>I am a...</label>
+              <select class="form-control">
+                <option value="" disabled selected>Select option</option>
+                <option value="admin">School Administrator</option>
+                <option value="teacher">Teacher</option>
+                <option value="principal">Principal/Director</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="form-group full select-wrapper">
+              <label>I am Interested in...</label>
+              <select class="form-control">
+                <option value="" disabled selected>Select option</option>
+                <option value="district">District Plan (Custom)</option>
+                <option value="pro">Pro Growth Plan</option>
+                <option value="demo">Free Demo Only</option>
+                <option value="other">General Inquiry</option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="form-group full select-wrapper">
+              <label>Number of students.</label>
+              <select class="form-control">
+                <option value="" disabled selected>Select option</option>
+                <option value="1-500">1 - 500</option>
+                <option value="501-2000">501 - 2,000</option>
+                <option value="2000+">2,000+</option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="form-group full select-wrapper">
+              <label>Preferred mode of contact</label>
+              <select class="form-control">
+                <option value="" disabled selected>Select option</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="form-group full">
+              <label>Email address <span class="required">*</span></label>
+              <input type="email" class="form-control" placeholder="you@domain.com" required>
+            </div>
+
+            <div class="form-group">
+              <label>Contact number <span class="required">*</span></label>
+              <input type="tel" class="form-control" placeholder="+1 (555) 000-0000" required>
+            </div>
+
+            <div class="form-group">
+              <label>School name <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="Greenwood High" required>
+            </div>
+
+            <div class="form-group">
+              <label>City <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="City" required>
+            </div>
+
+            <div class="form-group">
+              <label>State <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="State/Province" required>
+            </div>
+
+            <div class="form-group full">
+              <label>Country <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="Country" required>
+            </div>
+
+            <div class="form-group full">
+              <label>Messages <span class="required">*</span></label>
+              <textarea class="form-control" placeholder="Message here..." required></textarea>
+            </div>
+
+            <div class="form-group full" style="margin-top: 16px;">
+              <button type="submit" class="btn-submit">Submit Request</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating action button matching the red chat bubble in screenshot -->
+  <div class="floating-chat">
+    <i class="fa-solid fa-message"></i>
+  </div>
+
+</body>
+</html>
+
+

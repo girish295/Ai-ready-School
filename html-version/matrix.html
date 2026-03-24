@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix - AI Ready School</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; background: #fff; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+    .hero { text-align: center; padding: 120px 0 160px; }
+    .badge { display: inline-block; padding: 6px 16px; background: #f8fafc; color: #64748b; border-radius: 100px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; border: 1px solid #e2e8f0; }
+    h1 { font-size: 72px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -3px; line-height: 1.1; max-width: 950px; margin-left: auto; margin-right: auto; }
+    .hero-p { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto 60px; line-height: 1.6; font-weight: 500; }
+    
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 160px; }
+    .card { background: #fff; border: 1px solid #f1f5f9; padding: 60px; border-radius: 60px; transition: 0.4s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.06); }
+    .card i { font-size: 32px; color: #0f172a; margin-bottom: 30px; display: block; }
+    .card h3 { font-size: 32px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
+    .card p { font-size: 16px; color: #64748b; font-weight: 500; line-height: 1.7; }
+    
+    .faq { max-width: 800px; margin: 0 auto 160px; }
+    .faq h2 { font-size: 48px; font-weight: 900; text-align: center; margin-bottom: 80px; }
+    .faq-item { border: 1px solid #f1f5f9; border-radius: 24px; padding: 32px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+    .faq-item:hover { background: #f8fafc; border-color: #eb2e7655; }
+    .faq-q { font-size: 18px; font-weight: 800; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { display: none; padding-top: 20px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    .faq-item.active .faq-a { display: block; }
+    
+    .cta { background: #0f172a; padding: 120px 0; text-align: center; color: #fff; }
+    .btn-pink { background: #eb2e76; color: #fff; padding: 24px 60px; border-radius: 20px; text-decoration: none; font-weight: 900; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <a href="solutions-schools.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Pillars</a>
+    <div class="logo"><div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer; transform: scale(1.1); transform-origin: left;" onclick="location.href='index.html'"><div style="display: flex; align-items: center; position: relative;"><!-- Sparkle cluster --><i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -16px; left: -2px;"></i><i class="fa-solid fa-sparkle" style="color: #eb2e76; font-size: 6px; position: absolute; top: -10px; left: 10px; opacity: 0.6;"></i><span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1.5px;">AI Ready</span><span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -10px; margin-left: 2px;">TM</span></div><div style="width: 100%; padding-left: 56px; margin-top: -4px;"><span style="font-size: 18px; font-weight: 900; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span></div></div></div>
+    <div style="width: 100px;"></div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="badge">Sovereign AI Infrastructure</div>
+  <h1>Private AI Owned & Controlled by Your School</h1>
+  <p class="hero-p">Sensitive student and staff data never leaves your premises. Matrix runs AI locally on dedicate servers, ensuring total data sovereignty.</p>
+</section>
+
+<section class="container grid">
+  <div class="card">
+     <i class="fa-solid fa-server"></i>
+     <h3>On-Premises Servers</h3>
+     <p>Sovereign, school-owned servers that bring powerful AI directly inside the campus with zero cloud dependency.</p>
+  </div>
+  <div class="card">
+     <i class="fa-solid fa-shield-halved"></i>
+     <h3>Complete DPDP Privacy</h3>
+     <p>Fully aligned with India's Digital Personal Data Protection Act. The school remains the data fiduciary—data stays on-campus.</p>
+  </div>
+</section>
+
+<section class="container faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">What is Matrix exactly?</div>
+    <div class="faq-a">Matrix is AI Ready School's on-premises infrastructure—a sovereign, school-owned AI server for private campus intelligence.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Does it work without internet?</div>
+    <div class="faq-a">Yes. Students and teachers can access the full suite of AI tools even without an internet connection over the local network.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">How is it better than Cloud AI?</div>
+    <div class="faq-a">Cloud AI sends data to external servers. Matrix keeps all processing within school premises, ensuring total sovereignty and security.</div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 40px; color: #fff;">Get Matrix for Your School</h2>
+    <a href="#" class="btn-pink">Request Audit <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+</body>
+</html>
+
+

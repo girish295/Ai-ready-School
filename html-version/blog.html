@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Ready School Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fafafa; color: #1e293b; margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    header { padding: 40px 0; background: #fff; border-bottom: 1px solid #f1f5f9; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+    .hero { text-align: center; padding: 120px 0 160px; }
+    h1 { font-size: 72px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -3px; line-height: 1; }
+    .hero-p { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto 60px; line-height: 1.6; font-weight: 500; }
+    
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding-bottom: 160px; }
+    .blog-card { background: #fff; border: 1px solid #f1f5f9; border-radius: 40px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .blog-card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.06); }
+    .blog-img { aspect-ratio: 16/10; width: 100%; object-fit: cover; background: #eee; }
+    .blog-content { padding: 40px; flex: 1; display: flex; flex-direction: column; }
+    .blog-date { font-size: 10px; font-weight: 900; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .blog-title { font-size: 20px; font-weight: 900; color: #0f172a; margin: 0 0 20px; line-height: 1.3; transition: 0.3s; }
+    .blog-card:hover .blog-title { color: #eb2e76; }
+    .blog-desc { font-size: 14px; color: #64748b; font-weight: 500; line-height: 1.6; margin: 0 0 30px; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .blog-link { font-size: 12px; font-weight: 900; color: #eb2e76; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; gap: 8px; margin-top: auto; }
+    
+    .newsletter { background: #0f172a; padding: 120px 0; color: #fff; text-align: center; }
+    .news-h2 { font-size: 48px; font-weight: 900; margin-bottom: 20px; }
+    .news-p { font-size: 18px; color: #94a3b8; margin-bottom: 60px; }
+    .news-form { max-width: 500px; margin: 0 auto; display: flex; gap: 16px; }
+    .news-form input { flex: 1; padding: 20px 30px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-weight: 600; }
+    .news-form button { background: #eb2e76; color: #fff; padding: 20px 40px; border-radius: 20px; border: none; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 10px 30px rgba(235,46,118,0.3); }
+
+    @media (max-width: 1024px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <a href="index.html" class="back-link"><i class="fa-solid fa-chevron-left" style="margin-right: 8px;"></i> Back home</a>
+    <div class="logo">
+      <div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer;" onclick="location.href='index.html'">
+         <div style="display: flex; align-items: center; position: relative;">
+            <i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -14px; left: 0;"></i>
+            <span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1px;">AI Ready</span>
+            <span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -12px; margin-left: 2px;">TM</span>
+         </div>
+         <div style="width: 100%; text-align: center; margin-top: -2px;">
+            <span style="font-size: 18px; font-weight: 800; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">Blog</span>
+         </div>
+      </div>
+    </div>
+    <div style="width: 100px;"></div>
+  </div>
+</header>
+
+<section class="hero container">
+  <h1>AI Ready <span style="color: #eb2e76;">School</span> Blog</h1>
+  <p class="hero-p">Insights and perspectives on the intersection of human and artificial agency in the modern classroom.</p>
+</section>
+
+<main class="container">
+  <div class="blog-grid">
+    <!-- Post 1 -->
+    <a href="teacher-first.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="Teacher">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> March 24, 2026</div>
+          <h3 class="blog-title">Teacher First: How AI Should Empower Educators, Not Replace Them</h3>
+          <p class="blog-desc">The real power of AI in education isn't in automating teachers, but in automating the 'boring' parts of teaching so educators can focus on mentorship.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 2 -->
+    <a href="thinking-not-answers.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="Robot Pattern">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> March 23, 2026</div>
+          <h3 class="blog-title">Why AI Should Make Children Think, Not Give Them Answers</h3>
+          <p class="blog-desc">Generic AI bots are built for efficiency, but educational AI must be built for friction—the productive struggle that leads to true understanding.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 3 -->
+    <a href="summit-2026.html" class="blog-card">
+       <img src="images/blog/india-summit.png" class="blog-img" alt="Conference">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> March 20, 2026</div>
+          <h3 class="blog-title">What 1,000+ Visitors at India AI Impact Summit Taught Us About Schools</h3>
+          <p class="blog-desc">The summit revealed a massive gap between school leaders' appetite for innovation and their concern for data sovereignty and privacy.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 4 -->
+    <a href="human-first.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="Philosophy">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> March 18, 2026</div>
+          <h3 class="blog-title">Human First, AI Next: Why Our Philosophy Matters More Than Our Tech</h3>
+          <p class="blog-desc">Tools without a soul are dangerous in the classroom. We explore why nurturing human agency is the primary goal of every line of code we write.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 5 -->
+    <a href="techx-2025.html" class="blog-card" style="display:none;"></a> <!-- Placeholder for logic check -->
+    
+    <a href="chatgpt-myth.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="Myth">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> March 13, 2026</div>
+          <h3 class="blog-title">The Dangerous Myth "We Use ChatGPT, So We're an AI School"</h3>
+          <p class="blog-desc">Handing out logins to a general-purpose LLM doesn't make a school AI-ready. True readiness requires an infrastructure that handles privacy.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 6 -->
+    <a href="imagination-to-ink.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="Student success">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> March 12, 2026</div>
+          <h3 class="blog-title">From Imagination to Ink: A Grade 5 Story of Creativity and Confidence</h3>
+          <p class="blog-desc">How one student used our creative hub to bridge the gap between their imagination and writing skills, producing an 80-page novel.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 7 -->
+    <a href="techx-2025.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="TechX">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> Dec 15, 2025</div>
+          <h3 class="blog-title">AI Ready School at ET TechX Hyderabad: Showcasing Practical AI</h3>
+          <p class="blog-desc">Bridging the gap between AI hype and classroom reality with localized CBSE-aligned tools and safe frameworks.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+
+    <!-- Post 8 -->
+    <a href="ai-right-way.html" class="blog-card">
+       <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop" class="blog-img" alt="Right Way">
+       <div class="blog-content">
+          <div class="blog-date"><i class="fa-solid fa-calendar"></i> Dec 6, 2025</div>
+          <h3 class="blog-title">How to Use AI the Right Way at Your School</h3>
+          <p class="blog-desc">A 3-step framework for governance, teacher empowerment, and student safety that every principal should follow.</p>
+          <div class="blog-link">Read Post <i class="fa-solid fa-arrow-right"></i></div>
+       </div>
+    </a>
+  </div>
+</main>
+
+<section class="newsletter">
+  <div class="container">
+    <h2 class="news-h2">Stay Ready for the Future.</h2>
+    <p class="news-p">Join 5000+ educators receiving our weekly digest on safe AI practices.</p>
+    <div class="news-form">
+      <input type="email" placeholder="you@school.edu">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - AI Ready School</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f4f6fb; /* Light soft blueish background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .card-container {
+      display: flex;
+      width: 1000px;
+      height: 600px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .left-panel {
+      flex: 1;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right-panel {
+      flex: 1.2;
+      background: #fdfdfd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .right-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #374151;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo .ai {
+      color: #f43f5e; /* Pink red */
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #1f2937;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #6b7280;
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+
+    .input-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-wrapper i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 14px 14px 14px 44px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #1f2937;
+      box-sizing: border-box;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .input-wrapper input:focus {
+      border-color: #f43f5e;
+      box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.1);
+    }
+
+    .forgot-link {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    
+    .forgot-link:hover {
+      color: #f43f5e;
+      text-decoration: underline;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .remember-me input {
+      width: 16px;
+      height: 16px;
+      accent-color: #f43f5e;
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: #f43f5e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 24px;
+      transition: all 0.2s;
+    }
+
+    .btn-submit:hover {
+      background: #e11d48;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .divider::before { margin-right: 10px; }
+    .divider::after { margin-left: 10px; }
+
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #e5e7eb;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+    }
+
+    .social-btn.google { color: #ea4335; }
+    .social-btn.facebook { color: #1877f2; border-color: #1877f2; }
+    .social-btn.apple { color: #000000; }
+
+    .social-btn:hover {
+      background: #f9fafb;
+    }
+
+    .signup-text {
+      text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .signup-text a {
+      color: #f43f5e;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .signup-text a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 1024px) {
+      .card-container {
+        width: 90%;
+        height: auto;
+      }
+      .right-panel {
+        display: none;
+      }
+      .left-panel {
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    
+    <div class="left-panel">
+      <div class="logo">
+        <span class="ai">AI</span> Ready School
+      </div>
+
+      <h1>Welcome Back!</h1>
+      <div class="subtitle">Sign in to your account</div>
+
+      <form onsubmit="event.preventDefault(); window.close();">
+        <div class="input-wrapper">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-wrapper">
+          <i class="fa-solid fa-lock" style="color:#d1d5db;"></i>
+          <input type="password" placeholder="Password" required>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <label class="remember-me">
+          <input type="checkbox">
+          Remember Me
+        </label>
+
+        <button type="submit" class="btn-submit">Sign In</button>
+      </form>
+
+      <div class="divider">Or sign in with</div>
+
+      <div class="social-login">
+        <button class="social-btn google"><i class="fa-brands fa-google"></i></button>
+        <button class="social-btn facebook" style="background: #1877f2; color: white;"><i class="fa-brands fa-facebook-f"></i></button>
+        <button class="social-btn apple" style="display:flex; align-items:center; justify-content:center;"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="width:18px;height:18px; opacity:0.9;"/></button>
+      </div>
+
+      <div class="signup-text">
+        Don't have an account? <a href="#">Sign Up</a>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <!-- Using local placeholder illustration -->
+      <img src="../public/signin-illustration.png" alt="Education Illustration">
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+

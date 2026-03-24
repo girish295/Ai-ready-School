@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morpheus - AI Ready School</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; background: #fff; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+    .hero { text-align: center; padding: 120px 0 160px; }
+    .badge { display: inline-block; padding: 6px 16px; background: #f5f3ff; color: #8b5cf6; border-radius: 100px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; border: 1px solid #ddd6fe; }
+    h1 { font-size: 72px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -3px; line-height: 1; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .hero-p { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto 60px; line-height: 1.6; font-weight: 500; }
+    .hero-icon { width: 120px; height: 120px; background: #f5f3ff; color: #8b5cf6; border-radius: 40px; display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto; box-shadow: 0 20px 40px rgba(139,92,246,0.15); border: 1px solid #ddd6fe; animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
+    
+    .steps-section { background: #f8fafc; padding: 160px 0; border-radius: 80px; margin-bottom: 160px; text-align: center; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; position: relative; }
+    .steps-grid::before { content: ''; position: absolute; top: 60px; left: 15%; right: 15%; height: 2px; background: #e2e8f0; }
+    .step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+    .step-num { width: 120px; height: 120px; background: #fff; border: 4px solid #f1f5f9; border-radius: 120px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: #cbd5e1; margin-bottom: 40px; transition: 0.4s; }
+    .step:hover .step-num { border-color: #8b5cf6; color: #8b5cf6; transform: scale(1.1); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+    h3 { font-size: 24px; font-weight: 900; color: #0f172a; margin-bottom: 16px; }
+    p { font-size: 16px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    
+    .faq { max-width: 800px; margin: 0 auto 160px; }
+    .faq h2 { font-size: 48px; font-weight: 900; text-align: center; margin-bottom: 80px; }
+    .faq-item { border: 1px solid #f1f5f9; border-radius: 24px; padding: 32px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+    .faq-item:hover { background: #f8fafc; border-color: #8b5cf655; }
+    .faq-q { font-size: 18px; font-weight: 800; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { display: none; padding-top: 20px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    .faq-item.active .faq-a { display: block; }
+    
+    .footer-cta { background: #8b5cf6; padding: 120px 0; border-radius: 0; text-align: center; color: #fff; }
+    .btn-white { background: #fff; color: #8b5cf6; padding: 24px 60px; border-radius: 24px; text-decoration: none; font-weight: 900; text-transform: uppercase; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <a href="solutions-schools.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Pillars</a>
+    <div class="logo"><div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer; transform: scale(1.1); transform-origin: left;" onclick="location.href='index.html'"><div style="display: flex; align-items: center; position: relative;"><!-- Sparkle cluster --><i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -16px; left: -2px;"></i><i class="fa-solid fa-sparkle" style="color: #eb2e76; font-size: 6px; position: absolute; top: -10px; left: 10px; opacity: 0.6;"></i><span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1.5px;">AI Ready</span><span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -10px; margin-left: 2px;">TM</span></div><div style="width: 100%; padding-left: 56px; margin-top: -4px;"><span style="font-size: 18px; font-weight: 900; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span></div></div></div>
+    <div style="width: 100px;"></div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="badge">The Future of Teaching is Here</div>
+  <h1>Meet Morpheus, an AI-Powered Teaching Agent</h1>
+  <p class="hero-p">Morpheus handles lesson creation and planning, so you can focus on inspiration. Built specifically for IB, Cambridge, and CBSE standards.</p>
+  <div class="hero-icon"><i class="fa-solid fa-user-graduate"></i></div>
+</section>
+
+<section class="container steps-section">
+  <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 80px;">Three Simple Steps</h2>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Tell Morpheus</h3>
+      <p>Input your topic or learning objectives and Morpheus starts drafting your curriculum.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Lesson is Ready</h3>
+      <p>Receive your personalized plans, charts, and video links tailored to your specific timeframe.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Support Children</h3>
+      <p>Identify learning gaps instantly with deep data signals while Morpheus supports in the background.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Is it difficult to use Morpheus?</div>
+    <div class="faq-a">Not at all. If you can choose options and click a button, you can use Morpheus.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Will AI replace teachers?</div>
+    <div class="faq-a">No. Morpheus is designed to support teachers, not replace them. It handles the workload so you can focus on teaching.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Can I fully customize my lessons?</div>
+    <div class="faq-a">Yes. You can fully customize lessons, materials, and instructions for every group of students.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">How safe is the environment?</div>
+    <div class="faq-a">Morpheus provides a safe and age-appropriate AI environment with strict education-first boundaries.</div>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <div class="container">
+    <h2>Save 75% of your planning time.</h2>
+    <a href="#" class="btn-white">Book Your Demo <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+</body>
+</html>
+
+

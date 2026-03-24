@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cypher - AI Ready School</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; overflow-x: hidden; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; background: #fff; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+    .hero { text-align: center; padding: 120px 0 160px; position: relative; }
+    .badge { display: inline-block; padding: 6px 16px; background: #fff0f6; color: #eb2e76; border-radius: 100px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; border: 1px solid #ffd6e7; box-shadow: 0 4px 12px rgba(235,46,118,0.1); }
+    h1 { font-size: 72px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -3px; line-height: 1; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .hero-p { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto 60px; line-height: 1.6; font-weight: 500; }
+    .hero-icon { width: 120px; height: 120px; background: #fff0f6; color: #eb2e76; border-radius: 40px; display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto; box-shadow: 0 20px 40px rgba(235,46,118,0.15); border: 1px solid #ffd6e7; animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
+    
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 160px; }
+    .card { background: #fff; border: 1px solid #f1f5f9; padding: 60px; border-radius: 50px; transition: all 0.4s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.06); }
+    .card i { font-size: 28px; color: #eb2e76; margin-bottom: 30px; display: block; }
+    .card h3 { font-size: 28px; font-weight: 900; color: #0f172a; margin: 0 0 20px; }
+    .card p { font-size: 16px; color: #64748b; font-weight: 500; line-height: 1.7; margin: 0; }
+    
+    .section-full { background: #0f172a; color: #fff; padding: 160px 0; border-radius: 80px; margin-bottom: 160px; overflow: hidden; position: relative; }
+    .section-full h2 { font-size: 48px; font-weight: 900; margin-bottom: 60px; color: #fff; }
+    .suite-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .suite-item { display: flex; align-items: center; gap: 20px; padding: 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; }
+    .suite-item i { color: #eb2e76; font-size: 20px; }
+    .suite-item span { font-weight: 800; }
+    
+    .testimonials { background: #f8fafc; padding: 160px 0; margin-bottom: 160px; border-radius: 80px; }
+    .test-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .test-card { background: #fff; padding: 60px; border-radius: 50px; position: relative; }
+    .test-card i.quote { position: absolute; top: 40px; right: 40px; font-size: 40px; color: #eb2e76; opacity: 0.1; }
+    .test-card p { font-size: 22px; font-weight: 700; color: #0f172a; margin-bottom: 40px; line-height: 1.5; }
+    .test-author { font-weight: 900; color: #0f172a; }
+    .test-role { font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+    
+    .faq { padding: 0 0 160px; max-width: 800px; margin: 0 auto; }
+    .faq h2 { font-size: 48px; font-weight: 900; text-align: center; margin-bottom: 80px; }
+    .faq-item { border: 1px solid #f1f5f9; border-radius: 24px; padding: 32px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+    .faq-item:hover { background: #f8fafc; border-color: #eb2e7633; }
+    .faq-q { font-size: 18px; font-weight: 800; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q i { font-size: 14px; color: #cbd5e1; }
+    .faq-a { display: none; padding-top: 20px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    .faq-item.active .faq-a { display: block; }
+    .faq-item.active .faq-q i { transform: rotate(180deg); color: #eb2e76; }
+    
+    .cta { background: #eb2e76; padding: 120px 0; border-radius: 0; text-align: center; color: #fff; }
+    .cta h2 { font-size: 64px; font-weight: 900; color: #fff; margin-bottom: 40px; }
+    .btn-white { background: #fff; color: #eb2e76; padding: 24px 60px; border-radius: 24px; text-decoration: none; font-weight: 900; text-transform: uppercase; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <a href="solutions-schools.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Pillars</a>
+    <div class="logo"><div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer; transform: scale(1.1); transform-origin: left;" onclick="location.href='index.html'"><div style="display: flex; align-items: center; position: relative;"><!-- Sparkle cluster --><i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -16px; left: -2px;"></i><i class="fa-solid fa-sparkle" style="color: #eb2e76; font-size: 6px; position: absolute; top: -10px; left: 10px; opacity: 0.6;"></i><span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1.5px;">AI Ready</span><span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -10px; margin-left: 2px;">TM</span></div><div style="width: 100%; padding-left: 56px; margin-top: -4px;"><span style="font-size: 18px; font-weight: 900; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span></div></div></div>
+    <a href="#" class="back-link" style="color: #0f172a;">Sign Up</a>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="badge">A Personal AI Learning Companion</div>
+  <h1>Cypher Guides Students to Think Better and Learn Confidently</h1>
+  <p class="hero-p">Cypher is not just a chatbot; it's a thinking partner designed to help children discover knowledge through guided discovery and built-in safety filters.</p>
+  <div class="hero-icon"><i class="fa-solid fa-robot"></i></div>
+</section>
+
+<section class="container">
+  <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 60px; letter-spacing: -2px;">Guided Thinking, Not Spoon-feeding</h2>
+  <div class="grid">
+    <div class="card">
+       <i class="fa-solid fa-brain"></i>
+       <h3>Think Critical, Not Memorize</h3>
+       <p>Guides students to reason through concepts systematically instead of just searching for instant answers.</p>
+    </div>
+    <div class="card">
+       <i class="fa-solid fa-shield-halved"></i>
+       <h3>Age-Appropriate Safety</h3>
+       <p>Built-in safety filters ensure age-appropriate, focused, and responsible learning at all times.</p>
+    </div>
+    <div class="card">
+       <i class="fa-solid fa-chart-line"></i>
+       <h3>Insights to Teachers & Parents</h3>
+       <p>Unlock deep profiles of student progress, cognitive behavior, and hidden learning gaps effortlessly.</p>
+    </div>
+    <div class="card">
+       <i class="fa-solid fa-bolt"></i>
+       <h3>Intuitive Adaptation</h3>
+       <p>Analyzes student signals in real-time to adjust tone, depth, and complexity for every individual child.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container section-full">
+  <h2>The Smartest Tutoring Suite</h2>
+  <div class="suite-grid">
+    <div class="suite-item"><i class="fa-solid fa-message"></i> <span>Text Conversations</span></div>
+    <div class="suite-item"><i class="fa-solid fa-code"></i> <span>Code Generation</span></div>
+    <div class="suite-item"><i class="fa-solid fa-image"></i> <span>Visual Imagery</span></div>
+    <div class="suite-item"><i class="fa-solid fa-shapes"></i> <span>Interactive Diagrams</span></div>
+    <div class="suite-item"><i class="fa-solid fa-video"></i> <span>YT Video Insights</span></div>
+    <div class="suite-item"><i class="fa-solid fa-file-lines"></i> <span>Assignments</span></div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 80px;">
+       <div class="badge">Success Stories</div>
+       <h2 style="font-size: 48px; font-weight: 900;">Hear What Our Community Says</h2>
+    </div>
+    <div class="test-grid">
+       <div class="test-card">
+          <i class="fa-solid fa-quote-right quote"></i>
+          <p>"Cypher has simplified my daily teaching work. It helps me quickly create worksheets, lesson plans, and engaging content."</p>
+          <div class="test-author">Shraddha</div>
+          <div class="test-role">Primary Educator</div>
+       </div>
+       <div class="test-card">
+          <i class="fa-solid fa-quote-right quote"></i>
+          <p>"It feels like having multiple search engines rolled into one smart teaching assistant. My students love the guided thinking."</p>
+          <div class="test-author">Jayesh</div>
+          <div class="test-role">School Coordinator</div>
+       </div>
+    </div>
+  </div>
+</section>
+
+<section class="container faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Is Cypher just like ChatGPT? <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="faq-a">No, it is specifically tuned to help children "discover" knowledge and build skills rather than just giving direct answers.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Does it help with homework? <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="faq-a">Yes, it acts as a playful companion that assists in understanding, completing, and providing feedback on homework.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Is it safe for students? <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="faq-a">Yes, Cypher features built-in safety filters and is strictly confined to set educational boundaries.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Does it provide reports to parents? <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="faq-a">Yes, it offers a 360-degree learner profile and proactive alerts for teachers and parents regarding learning patterns.</div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Experience Cypher today.</h2>
+    <a href="#" class="btn-white">Book Your Demo <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+</body>
+</html>
+
+

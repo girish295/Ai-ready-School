@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zion - AI Ready School</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; background: #fff; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+    .hero { text-align: center; padding: 120px 0 160px; }
+    .badge { display: inline-block; padding: 6px 16px; background: #eff6ff; color: #3b82f6; border-radius: 100px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; border: 1px solid #dbeafe; }
+    h1 { font-size: 72px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -3px; line-height: 1; max-width: 950px; margin-left: auto; margin-right: auto; }
+    .hero-p { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto 60px; line-height: 1.6; font-weight: 500; }
+    .hero-icon { width: 120px; height: 120px; background: #eff6ff; color: #3b82f6; border-radius: 40px; display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #dbeafe; }
+    
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 160px; }
+    .card { background: #f8fafc; padding: 50px; border-radius: 40px; }
+    .card:hover { background: #fff; box-shadow: 0 30px 60px rgba(59,130,246,0.1); }
+    .card i { font-size: 32px; color: #3b82f6; margin-bottom: 30px; display: block; }
+    .card h3 { font-size: 24px; font-weight: 900; color: #0f172a; margin-bottom: 20px; }
+    .card p { font-size: 15px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    
+    .faq { max-width: 800px; margin: 0 auto 160px; }
+    .faq h2 { font-size: 48px; font-weight: 900; text-align: center; margin-bottom: 80px; }
+    .faq-item { border: 1px solid #f1f5f9; border-radius: 24px; padding: 32px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+    .faq-item:hover { background: #f8fafc; border-color: #3b82f655; }
+    .faq-q { font-size: 18px; font-weight: 800; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { display: none; padding-top: 20px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    .faq-item.active .faq-a { display: block; }
+    
+    .cta { background: #3b82f6; padding: 120px 0; text-align: center; color: #fff; }
+    .btn-white { background: #fff; color: #3b82f6; padding: 24px 60px; border-radius: 20px; text-decoration: none; font-weight: 900; text-transform: uppercase; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <a href="solutions-schools.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Pillars</a>
+    <div class="logo"><div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer; transform: scale(1.1); transform-origin: left;" onclick="location.href='index.html'"><div style="display: flex; align-items: center; position: relative;"><!-- Sparkle cluster --><i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -16px; left: -2px;"></i><i class="fa-solid fa-sparkle" style="color: #eb2e76; font-size: 6px; position: absolute; top: -10px; left: 10px; opacity: 0.6;"></i><span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1.5px;">AI Ready</span><span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -10px; margin-left: 2px;">TM</span></div><div style="width: 100%; padding-left: 56px; margin-top: -4px;"><span style="font-size: 18px; font-weight: 900; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span></div></div></div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="badge">30+ AI Tools in One Suite</div>
+  <h1>Powerful Collection of AI Tools for Students & Teachers</h1>
+  <p class="hero-p">A collection of AI tools that helps students learn faster, think better, and create amazing things all in one integrated dashboard.</p>
+  <div class="hero-icon"><i class="fa-solid fa-layer-group"></i></div>
+</section>
+
+<section class="container grid">
+  <div class="card">
+     <i class="fa-solid fa-graduation-cap"></i>
+     <h3>Learning</h3>
+     <p>Accelerate subject discovery with targeted AI agents for school curriculum.</p>
+  </div>
+  <div class="card">
+     <i class="fa-solid fa-wand-magic-sparkles"></i>
+     <h3>Creativity</h3>
+     <p>Visual generators and storytellers to transform ideas into awesome decks.</p>
+  </div>
+  <div class="card">
+     <i class="fa-solid fa-magnifying-glass"></i>
+     <h3>Research</h3>
+     <p>Tools for deep inquiry, fact-checking, and better sourcing of information.</p>
+  </div>
+  <div class="card">
+     <i class="fa-solid fa-box-perspective"></i>
+     <h3>Projects</h3>
+     <p>Lifecycle support for building and presenting high-quality school projects.</p>
+  </div>
+</section>
+
+<section class="container faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">What is Zion Tool Suite?</div>
+    <div class="faq-a">Zion is a collection of 30+ AI tools that helps students learn, research, create, and build projects all in one platform.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Is it easy for young students?</div>
+    <div class="faq-a">Yes. Zion is designed to be very simple and intuitive, so students of all age groups can use it easily and safely.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Can teachers use Zion too?</div>
+    <div class="faq-a">Definitely. Teachers use it to create amazing learning materials, activity-based lessons, and to plan engagement sessions.</div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 40px; color: #fff;">Get Zion for your classroom.</h2>
+    <a href="#" class="btn-white">Book Your Strategy Call <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+</body>
+</html>
+
+

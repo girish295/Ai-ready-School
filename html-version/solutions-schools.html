@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Pillars for Schools - AI Ready School</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    
+    header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .back-link:hover { color: #eb2e76; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    
+    .hero { text-align: center; padding: 80px 0 100px; }
+    .badge { display: inline-block; padding: 6px 16px; background: #fff0f6; color: #eb2e76; border-radius: 100px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; }
+    h1 { font-size: 56px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -2px; line-height: 1.1; }
+    .subtitle { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto; line-height: 1.6; font-weight: 500; }
+    
+    .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 120px; }
+    .pillar-card { background: #fff; border: 1px solid #f1f5f9; border-radius: 40px; padding: 50px; text-decoration: none; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+    .pillar-card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.06); border-color: #eb2e761a; }
+    
+    .icon-box { width: 64px; height: 64px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 30px; transition: transform 0.4s; }
+    .pillar-card:hover .icon-box { transform: scale(1.1); }
+    
+    h3 { font-size: 28px; font-weight: 900; color: #0f172a; margin: 0 0 8px; }
+    .tagline { color: #eb2e76; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; }
+    p { color: #64748b; font-size: 15px; font-weight: 500; line-height: 1.6; margin: 0 0 40px; flex-grow: 1; }
+    
+    .explore-btn { display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; transition: gap 0.2s; }
+    .pillar-card:hover .explore-btn { gap: 14px; }
+    .explore-btn i { color: #eb2e76; }
+    
+    .bg-shape { position: absolute; bottom: -40px; right: -40px; width: 140px; height: 140px; background: #f8fafc; border-radius: 100px; z-index: -1; transition: transform 0.6s; }
+    .pillar-card:hover .bg-shape { transform: scale(1.5); background: #fff0f680; }
+    
+    .cta-section { background: #0f172a; padding: 120px 0; text-align: center; color: #fff; border-radius: 0 0 60px 60px; }
+    .cta-section h2 { font-size: 42px; font-weight: 900; margin-bottom: 40px; }
+    .btn-primary { background: #eb2e76; color: #fff; padding: 22px 44px; border-radius: 20px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 20px 40px rgba(235,46,118,0.3); transition: all 0.3s; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 30px 60px rgba(235,46,118,0.4); background: #d42769; }
+
+    @media (max-width: 1024px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <a href="index.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Home</a>
+  <div class="logo">
+    <div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer;" onclick="location.href='index.html'">
+       <div style="display: flex; align-items: center; position: relative;">
+          <i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -14px; left: 0;"></i>
+          <span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1px;">AI Ready</span>
+          <span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -12px; margin-left: 2px;">TM</span>
+       </div>
+       <div style="width: 100%; text-align: center; margin-top: -2px;">
+          <span style="font-size: 18px; font-weight: 800; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span>
+       </div>
+    </div>
+  </div>
+  <div style="width: 100px;"></div>
+</header>
+
+<section class="hero container">
+  <div class="badge">The Complete Ecosystem</div>
+  <h1>One Platform. Five Core AI Pillars.</h1>
+  <p class="subtitle">Empowering schools with the foundation, agents, and tools needed to lead the future of education safely and effectively.</p>
+</section>
+
+<section class="container pillars-grid">
+  <!-- Cypher -->
+  <a href="cypher.html" class="pillar-card">
+    <div class="icon-box" style="background: #fff0f6; color: #eb2e76;"><i class="fa-solid fa-robot"></i></div>
+    <h3>Cypher</h3>
+    <div class="tagline">Student Learning Companion</div>
+    <p>Guide students to think better, learn confidently, and explore curiosity with 24/7 AI-first companionship.</p>
+    <div class="explore-btn">Explore Pillar <i class="fa-solid fa-arrow-right"></i></div>
+    <div class="bg-shape"></div>
+  </a>
+
+  <!-- Morpheus -->
+  <a href="morpheus.html" class="pillar-card">
+    <div class="icon-box" style="background: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-user-tie"></i></div>
+    <h3>Morpheus</h3>
+    <div class="tagline">AI Teaching Agent</div>
+    <p>The ultimate teaching assistant for lesson planning, grading, and creating personalized feedback loops.</p>
+    <div class="explore-btn">Explore Pillar <i class="fa-solid fa-arrow-right"></i></div>
+    <div class="bg-shape"></div>
+  </a>
+
+  <!-- Zion -->
+  <a href="zion.html" class="pillar-card">
+    <div class="icon-box" style="background: #eff6ff; color: #3b82f6;"><i class="fa-solid fa-shapes"></i></div>
+    <h3>Zion</h3>
+    <div class="tagline">AI Tool Suite</div>
+    <p>An all-in-one suite for rapid content generation, mapped perfectly to IB, Cambridge, and CBSE curricula.</p>
+    <div class="explore-btn">Explore Pillar <i class="fa-solid fa-arrow-right"></i></div>
+    <div class="bg-shape"></div>
+  </a>
+
+  <!-- NEO -->
+  <a href="neo.html" class="pillar-card">
+    <div class="icon-box" style="background: #ecfdf5; color: #10b981;"><i class="fa-solid fa-flask-vial"></i></div>
+    <h3>NEO</h3>
+    <div class="tagline">AI Innovation Lab</div>
+    <p>Unleash student creativity through experiments, AI coding, and hands-on building playgrounds.</p>
+    <div class="explore-btn">Explore Pillar <i class="fa-solid fa-arrow-right"></i></div>
+    <div class="bg-shape"></div>
+  </a>
+
+  <!-- Matrix -->
+  <a href="matrix.html" class="pillar-card">
+    <div class="icon-box" style="background: #f8fafc; color: #64748b;"><i class="fa-solid fa-database"></i></div>
+    <h3>Matrix</h3>
+    <div class="tagline">AI Infrastructure</div>
+    <p>The backbone of your school's AI strategy, ensuring total control over safety, privacy, and ethics.</p>
+    <div class="explore-btn">Explore Pillar <i class="fa-solid fa-arrow-right"></i></div>
+    <div class="bg-shape"></div>
+  </a>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to transform your school?</h2>
+    <a href="#" class="btn-primary">Book a Strategy Session <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+</body>
+</html>
+
+

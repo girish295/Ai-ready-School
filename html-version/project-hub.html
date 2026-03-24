@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Hub - AI Ready School</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: white; font-family: 'Inter', sans-serif; color: #1e293b; margin: 0; }
+    .nav { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .back { display: flex; align-items: center; gap: 10px; color: #94a3b8; font-weight: 800; text-transform: uppercase; text-decoration: none; font-size: 13px; letter-spacing: 1px; }
+    .back i { width: 40px; height: 40px; background: #f8fafc; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #1e293b; transition: all 0.2s; }
+    .back:hover i { background: #eb2e76; color: white; }
+    .logo { font-size: 28px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .logo span { color: #eb2e76; }
+
+    .hero { text-align: center; max-width: 900px; margin: 80px auto; padding: 0 20px; }
+    .hub-icon { width: 80px; height: 80px; background: #fff0f6; border-radius: 24px; color: #eb2e76; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; font-size: 32px; box-shadow: 0 10px 40px rgba(235, 46, 118, 0.1); }
+    .hero h1 { font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -2px; color: #0f172a; }
+    .hero p { font-size: 20px; color: #64748b; font-weight: 500; line-height: 1.6; }
+
+    .grid { max-width: 1200px; margin: 0 auto 100px; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .card { background: white; border: 1px solid #f1f5f9; border-radius: 40px; padding: 40px; text-align: center; transition: all 0.4s ease; display: flex; flex-direction: column; align-items: center; position: relative; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.05); border-color: #eb2e7622; }
+    .tool-icon { width: 100px; height: 100px; border-radius: 50%; background: #f8fafc; color: #eb2e76; display: flex; align-items: center; justify-content: center; font-size: 36px; margin-bottom: 30px; transition: all 0.4s; position: relative; overflow: hidden; }
+    .card:hover .tool-icon { background: #eb2e76; color: white; transform: rotate(10deg) scale(1.1); }
+    .card h3 { font-size: 24px; font-weight: 900; margin-bottom: 15px; color: #0f172a; }
+    .card p { font-size: 14px; color: #64748b; line-height: 1.6; font-weight: 500; }
+    .sparkle { position: absolute; top: -5px; right: -5px; color: #ffd700; font-size: 20px; }
+
+    .cta { background: #f8fafc; padding: 100px 20px; text-align: center; border-top: 1px solid #f1f5f9; }
+    .cta h2 { font-size: 36px; font-weight: 900; color: #0f172a; margin-bottom: 40px; }
+    .cta-btn { background: #eb2e76; color: white; text-decoration: none; padding: 20px 40px; border-radius: 20px; font-weight: 800; font-size: 18px; display: inline-block; box-shadow: 0 10px 30px rgba(235, 46, 118, 0.2); transition: all 0.2s; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    <div class="logo"><div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer; transform: scale(1.1); transform-origin: left;" onclick="location.href='index.html'"><div style="display: flex; align-items: center; position: relative;"><!-- Sparkle cluster --><i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -16px; left: -2px;"></i><i class="fa-solid fa-sparkle" style="color: #eb2e76; font-size: 6px; position: absolute; top: -10px; left: 10px; opacity: 0.6;"></i><span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1.5px;">AI Ready</span><span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -10px; margin-left: 2px;">TM</span></div><div style="width: 100%; padding-left: 56px; margin-top: -4px;"><span style="font-size: 18px; font-weight: 900; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span></div></div></div>
+    <div style="width: 150px;"></div>
+  </nav>
+
+  <section class="hero">
+    <div class="hub-icon"><i class="fa-solid fa-code"></i></div>
+    <h1>build real projects and apps with hands-on AI support.</h1>
+    <p>The Project Hub gives learners practical experience in coding, app building, and AI model training. Guided tools make experimentation safe and easy, turning ideas into working prototypes.</p>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <div class="tool-icon"><i class="fa-solid fa-terminal"></i><i class="fa-solid fa-star sparkle"></i></div>
+      <h3>AI Coding Playground</h3>
+      <p>A safe coding environment with AI assistance supporting multiple programming languages.</p>
+    </div>
+    <div class="card">
+      <div class="tool-icon"><i class="fa-solid fa-microchip"></i><i class="fa-solid fa-star sparkle"></i></div>
+      <h3>Teachable Machine</h3>
+      <p>Lets students train simple AI models using their own images and categories.</p>
+    </div>
+    <div class="card">
+      <div class="tool-icon"><i class="fa-solid fa-mobile-screen"></i><i class="fa-solid fa-star sparkle"></i></div>
+      <h3>App Builder</h3>
+      <p>A no-code tool to build simple AI-powered apps using natural language.</p>
+    </div>
+    <div class="card">
+      <div class="tool-icon"><i class="fa-solid fa-brain"></i><i class="fa-solid fa-star sparkle"></i></div>
+      <h3>AI Model Playground</h3>
+      <p>Compare and experiment with multiple AI models to understand how they respond.</p>
+    </div>
+    <div class="card">
+      <div class="tool-icon"><i class="fa-solid fa-puzzle-piece"></i><i class="fa-solid fa-star sparkle"></i></div>
+      <h3>Project Builder</h3>
+      <p>A guided workspace to turn ideas into structured project prototypes step-by-step.</p>
+    </div>
+    <div class="card">
+      <div class="tool-icon"><i class="fa-solid fa-lightbulb"></i><i class="fa-solid fa-star sparkle"></i></div>
+      <h3>Thinking Playground</h3>
+      <p>An AI-guided thinking coach for Design Thinking and AI Thinking.</p>
+    </div>
+  </div>
+
+  <section class="cta">
+    <h2>Ready to bring the Hub to your school?</h2>
+    <a href="demo.html" class="cta-btn">Book Free Demo</a>
+  </section>
+
+</body>
+</html>
+
+

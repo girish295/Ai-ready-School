@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEO - AI Ready School</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; background: #fff; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-size: 24px; font-weight: 900; color: #0f172a; text-decoration: none; font-style: italic; }
+    .back-link { text-decoration: none; color: #94a3b8; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+    .hero { text-align: center; padding: 120px 0 160px; }
+    .badge { display: inline-block; padding: 6px 16px; background: #ecfdf5; color: #10b981; border-radius: 100px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; border: 1px solid #d1fae5; }
+    h1 { font-size: 72px; font-weight: 900; color: #0f172a; margin: 0 0 30px; letter-spacing: -3px; line-height: 1; max-width: 950px; margin-left: auto; margin-right: auto; }
+    .hero-p { font-size: 20px; color: #64748b; max-width: 700px; margin: 0 auto 60px; line-height: 1.6; font-weight: 500; }
+    .hero-icon { width: 120px; height: 120px; background: #ecfdf5; color: #10b981; border-radius: 40px; display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #d1fae5; }
+    
+    .list-item { display: flex; gap: 40px; padding: 50px; background: #f8fafc; border-radius: 60px; border: 1px solid #f1f5f9; margin-bottom: 30px; }
+    .num { font-size: 48px; font-weight: 900; color: #d1fae5; line-height: 1; }
+    h3 { font-size: 32px; font-weight: 900; color: #0f172a; margin-bottom: 20px; }
+    p { font-size: 18px; color: #64748b; font-weight: 500; line-height: 1.7; }
+    
+    .faq { max-width: 800px; margin: 0 auto 160px; }
+    .faq h2 { font-size: 48px; font-weight: 900; text-align: center; margin-bottom: 80px; }
+    .faq-item { border: 1px solid #f1f5f9; border-radius: 24px; padding: 32px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+    .faq-item:hover { background: #f8fafc; border-color: #10b98155; }
+    .faq-q { font-size: 18px; font-weight: 800; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { display: none; padding-top: 20px; color: #64748b; font-weight: 500; line-height: 1.6; }
+    .faq-item.active .faq-a { display: block; }
+    
+    .cta { background: #10b981; padding: 120px 0; text-align: center; color: #fff; }
+    .btn-green { background: #0f172a; color: #fff; padding: 24px 60px; border-radius: 20px; text-decoration: none; font-weight: 900; text-transform: uppercase; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <a href="solutions-schools.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Pillars</a>
+    <div class="logo"><div style="display: flex; flex-direction: column; line-height: 1; align-items: start; position: relative; cursor: pointer; transform: scale(1.1); transform-origin: left;" onclick="location.href='index.html'"><div style="display: flex; align-items: center; position: relative;"><!-- Sparkle cluster --><i class="fa-solid fa-sparkles" style="color: #eb2e76; font-size: 14px; position: absolute; top: -16px; left: -2px;"></i><i class="fa-solid fa-sparkle" style="color: #eb2e76; font-size: 6px; position: absolute; top: -10px; left: 10px; opacity: 0.6;"></i><span style="color: #eb2e76; font-size: 28px; font-weight: 900; letter-spacing: -1.5px;">AI Ready</span><span style="color: #eb2e76; font-size: 10px; font-weight: 800; position: relative; top: -10px; margin-left: 2px;">TM</span></div><div style="width: 100%; padding-left: 56px; margin-top: -4px;"><span style="font-size: 18px; font-weight: 900; font-style: italic; background: linear-gradient(to right, #ffca28, #eb2e76); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">School</span></div></div></div>
+    <div style="width: 100px;"></div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="badge">Innovation Lab for Schools</div>
+  <h1>Build with AI, Don't Just Learn It.</h1>
+  <p class="hero-p">NEO AI Innovation Lab is a dedicated space in schools where students learn AI through hands-on projects, robotics, and real-world tools.</p>
+  <div class="hero-icon"><i class="fa-solid fa-flask-vial"></i></div>
+</section>
+
+<section class="container" style="padding-bottom: 160px;">
+  <div class="list-item">
+    <div class="num">01</div>
+    <div>
+      <h3>On-Site Mentorship</h3>
+      <p>Highly trained AI mentors are deployed to the campus to guide students, conduct sessions, and help them work on real AI projects.</p>
+    </div>
+  </div>
+  <div class="list-item">
+    <div class="num">02</div>
+    <div>
+      <h3>Age-Appropriate Curriculum</h3>
+      <p>Projects and curriculum designed specifically for different age groups (Grade 1-12) so students can learn AI step by step.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">What is a NEO Lab?</div>
+    <div class="faq-a">It is a dedicated space in schools where students learn about AI through hands-on projects, experiments, and innovation tools.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Do we need a new room?</div>
+    <div class="faq-a">Not necessarily. Many schools convert their existing computer or robotics lab into an AI lab with the right Matrix equipment.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">Who conducts the sessions?</div>
+    <div class="faq-a">Trained AI Mentors are deployed to your campus to prowadzi sessions and provide skillful guidance of the student projects.</div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 40px; color: #fff;">Build the future at your school.</h2>
+    <a href="#" class="btn-green">Get NEO Lab Quote <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+</body>
+</html>
+
+
